@@ -1,0 +1,21 @@
+{
+    "name": "colee/helpers",
+    "description": "PHP常用方法",
+    "type": "library",
+    "keywords": ["yii2","extension"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "CoLee",
+            "email": "5969226@qq.com"
+        }
+    ],
+    "require": {
+        
+    },
+    "autoload": {
+        "psr-4": {
+            "colee\\helpers\\": ""
+        }
+    }
+}
