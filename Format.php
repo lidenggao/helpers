@@ -18,6 +18,7 @@ class Format
     public static function substr($string, $number)
     {
         $string = preg_replace('/\s/', '', strip_tags($string));
-        return mb_substr($string, 0, $number,'utf8');
+        $string = str_replace('　', '', $string);
+        return mb_strcut($string, 0, $number,'utf8');
     }
 }
