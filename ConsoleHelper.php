@@ -16,7 +16,7 @@ class ConsoleHelper
     {
         array_unshift($params, $string);
         $str = call_user_func_array('sprintf', $params);
-        if(DIRECTORY_SEPARATOR=='\\'){
+        if(DIRECTORY_SEPARATOR=='\\' && mb_detect_encoding($str)=='GBK'){//通过window下的分隔符判断win平台
             return mb_convert_encoding($str, 'gbk','utf8');
         }else{
             return $str;
