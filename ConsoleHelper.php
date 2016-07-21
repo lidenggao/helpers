@@ -47,12 +47,11 @@ class ConsoleHelper
      *   %%     A single %
      * @return [type]
      */
-    public static function log($string, $params=[], $color=false)
+    public static function log($string, $params=[])
     {
         $string = self::format($string, $params).PHP_EOL;
-        if ($color) {
-            $string = Console::renderColoredString('%'.$color.$string);
-        }
+        $string = str_replace('color:', '%', $string);
+        $string = Console::renderColoredString($string);
         
         echo $string;
     }
